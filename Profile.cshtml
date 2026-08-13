@@ -1,0 +1,77 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<html>
+    <head>
+        <style>
+            body{
+                margin:0;
+                font-family:Arial,sans-serif;
+                background:#222;
+                min-height:100vh;
+            }
+            .progile-con{
+                width:900px;
+                margin:50px auto;
+                padding:40px;
+                display:flex;
+                align-items:center;
+                gap:60px;
+                background-color:#eaf4ff;
+                background-radius:15px;
+                box-shadow:0 4px 15px rgba(0,0,0,0.15);
+            }
+            .profile-photo img{
+                width:220px;
+                height:220px;
+                border-radius:50%;
+                object-fit:cover;
+            }
+            .profile-info{
+                flex:1;
+
+            }
+            .profile-info h1{
+                margin-bottom:10px;
+                font-size:30px;
+
+            }
+            .profile-info h3{
+                margin-top: 20px;
+                font-size: 20px;
+            }
+            .profile-info p{
+                line-height:1.6;
+                font-size:13px;
+            }
+            a{
+                font-size:17px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="progile-con">
+            <div class="profile-photo">
+                <img src="~/images/mi.jpeg" alt="photo" />
+            </div>
+            <div class="profile-info">
+                <h1>Hello, I'm Apparaya Patil</h1>
+                <h3> B.SC(ECS)-3rd Year Student</h3>
+                <p>
+                    I am a student of sangola mahavidhyalya sangola.
+                    I am interested in software develepmont and web development.i enjoy learning new technologies and building projects.
+                </p>
+                <h3>My Skills</h3>
+                <p>
+                    C++ | PYTHON | HTML | CSS | ASP.NET MVC | SQL
+                </p>
+                <h3> My Project</h3>
+                <p>College Student Managament System</p>
+                <a asp-controller="Student" asp-action="Login" class="login-btn">Go To Login</a>
+
+            </div>
+        </div>
+    </body>
+</html>

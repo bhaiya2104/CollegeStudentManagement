@@ -1,0 +1,106 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model CollegeStudentManagement.Models.Student
+
+@{
+    ViewData["Title"] = "Add Student";
+}
+<html>
+<head>
+    <style>
+        .main{
+            height:700px;
+            width:800px;
+            border:2px solid black;
+            padding:20px;
+            margin:auto;
+           
+        }
+        body{
+            background-color:#e8f5e9;
+        }
+        .form-control{
+            width:400px;
+            display:inline-block;
+        }
+        label{
+          display:inline-block;
+          width:70px;
+        }
+      
+        
+    </style>
+</head>
+<body>
+
+
+<form asp-action="Create" method="post">
+        <div class="main">
+
+     <h2>Add Student</h2>
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Email">Email:</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Mobile">Mobile:</label>
+        <input asp-for="Mobile" class="form-control" />
+        <span asp-validation-for="Mobile" class="text-danger"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label>Gender:</label>
+       <input type="radio" asp-for="Gender" value="Male" />Male
+       <input type="radio" asp-for="Gender" value="Female" />Female
+       <input type="radio" asp-for="Gender" value="other" />Other
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Course">Course:</label>
+        <input asp-for="Course" class="form-control" />
+        <span asp-validation-for="Course" class="text-danger"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Year">Year:</label>
+        <input asp-for="Year" class="form-control" />
+        <span asp-validation-for="Year" class="text-danger"></span>
+    </div>
+
+    <br />
+
+    <div>
+        <label asp-for="Address">Address:</label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <br />
+
+    <button type="submit">Save Student</button>
+    </div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model CollegeStudentManagement.Models.Student
+
+@{
+    ViewData["Title"] = "Edit Student";
+}
+<html>
+    <head>
+        <style>
+		body {
+			background-color: #EAF6FF;
+		}
+            .j{
+            height: 150%;
+            width: 500px;
+            border: 2px solid black;
+            padding-left: 10px;
+            }
+
+        </style>
+    </head>
+
+
+<form asp-action="Edit" method="post">
+    <body>
+        <h1>Edit Student</h1>
+        <div class="j">
+    <input type="hidden" name="StudentId" value="@Model.StudentId" />
+
+    <div>
+        <label>Name</label>
+        <input type="text" name="Name" value="@Model.Name" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Email</label>
+        <input type="text" name="Email" value="@Model.Email" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Mobile</label>
+        <input type="text" name="Mobile" value="@Model.Mobile" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Gender</label>
+        <input type="text" name="Gender" value="@Model.Gender" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Course</label>
+        <input type="text" name="Course" value="@Model.Course" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Year</label>
+        <input type="number" name="Year" value="@Model.Year" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Address</label>
+        <input type="text" name="Address" value="@Model.Address" />
+    </div>
+
+    <br />
+
+    <button type="submit">Update Student</button>
+
+    </div>
+</body>
+
+</form>
+</html>

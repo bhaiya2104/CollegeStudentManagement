@@ -1,0 +1,99 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<CollegeStudentManagement.Models.Student>
+
+@{
+    ViewData["Title"] = "Students";
+}
+<html>
+<head>
+    <style>
+        table{
+            background-color:lightgoldenrodyellow;
+            width:100%;
+
+        }
+        body{
+            background-color:aliceblue;
+        }
+        a{
+            border:1px solid black;
+            height:10px;
+            width:29px;
+            color:red;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<h1>Student List</h1>
+
+<form asp-action="Index" method="get">
+
+    <input type="text" name="search" placeholder="Enter student name" />
+
+    <button type="submit">Search</button>
+
+</form>
+
+<br />
+
+<a asp-action="Create">Add Student</a>
+
+<br />
+
+<br />
+@if(Model.Any()){
+<table border="1">
+    <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Gender</th>
+        <th>Course</th>
+        <th>Year</th>
+        <th>Address</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.StudentId</td>
+            <td>@student.Name</td>
+            <td>@student.Email</td>
+            <td>@student.Mobile</td>
+            <td>@student.Gender</td>
+            <td>@student.Course</td>
+            <td>@student.Year</td>
+            <td>@student.Address</td>
+
+            <td>
+                <a asp-action="Details" asp-route-id="@student.StudentId">
+                    Details
+                </a>
+
+                |
+
+                <a asp-action="Edit" asp-route-id="@student.StudentId">
+                    Edit
+                </a>
+
+                |
+
+                <a asp-action="Delete" asp-route-id="@student.StudentId">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+}
+</body>
+</html>
