@@ -37,7 +37,7 @@ namespace CollegeStudentManagement
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Student}/{action=Profile}/{id?}");
+                pattern: "{controller=Student}/{action=LOgin}/{id?}");
 
             app.Run();
         }
